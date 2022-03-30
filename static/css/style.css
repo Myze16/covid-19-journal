@@ -1,0 +1,41 @@
+.color-marigold {
+    color: #F7CE3E;
+}
+
+.color-steal {
+    color: #0A1612;
+}
+
+.color-denim {
+    color: #1A2930;
+}
+
+.color-screen {
+    color: #C5C1C0;
+}
+
+.bg-color-marigold {
+    background-color: #F7CE3E;
+}
+
+.bg-color-steal {
+    background-color: #0A1612 !important;
+}
+
+.bg-color-denim {
+    background-color: #1A2930 !important;
+}
+
+.bg-color-screen {
+    background-color: #C5C1C0;
+}
+
+.title-carousel, .text-carousel {
+    color: white  !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .6) !important;
+    font-size: 500px !important;
+}
+
+.text-card-thumbnail {
+    font-size: .3rem !important;
+}
