@@ -39,3 +39,34 @@
 .text-card-thumbnail {
     font-size: .3rem !important;
 }
+
+section {
+    width: 75% !important;
+    display: flex;
+    margin: auto;
+}
+nav form {
+    padding: 0 4%;
+}
+@media screen and (max-width: 1544px){
+    nav input[type=search] {
+        width: 100%;
+    }
+    nav form {
+        width: 25vw !important;
+    }
+    section {
+        width: 100% !important;
+        display: inline;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    nav h6 {
+        visibility: hidden;
+    }
+    nav form {
+        padding: 0;
+    }
+}

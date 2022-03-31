@@ -3,9 +3,9 @@
 
 {% block content%}
 <div class="Parallax my-5 py-5">
-    <!--Parallax-->
+    <!--========== Parallax ==========-->
     <div id="carouselExampleControls" class="carousel slide w-50 m-auto shadow my-5" data-bs-ride="carousel">
-        <!--Carousel-->
+        <!--========== Carousel ==========-->
         <div class="carousel-inner">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -16,7 +16,7 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-item active">
-                <!--First News-->
+                <!--========== First News ==========-->
                 <img src="https://www.jornalcidademg.com.br/wp-content/uploads/2021/12/Design-sem-nome-41.png"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block text-start">
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <!--Second News-->
+                <!-- ========== Second News ==========-->
                 <img src="https://coronavirus.butantan.gov.br/assets/page-image/favela-sp-e6aeca3fd67db103.jpg"
                     class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block text-start">
@@ -40,7 +40,7 @@
                     </div>
             </div>
             <div class="carousel-item">
-                <!--Third news-->
+                <!--========== Third news ==========-->
                 <img src="https://www.pmc.sc.gov.br/uploads/719/imagens/3104000.jpg"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block text-start">
@@ -64,12 +64,12 @@
         </button>
     </div>
 </div>
-<!--News pt1-->
-<section class="d-flex h-100 w-75 m-auto mt-5 py-5">
-    <div class="d-flex flex-column w-75">
-        <div class="d-flex w-100 py-5 flex-column align-items-center">
+<!--========== News pt1 ==========-->
+<section class="h-100 m-auto mt-5 py-5">
+    <div class="d-flex flex-column w-100">
+        <div class="d-flex w-75 m-auto py-5 flex-column align-items-center px-5">
         {% for noticia in noticias %}
-            <div class="w-75 mb-5">
+            <div class="w-100 mb-5">
                 <div class="border-bottom pb-5 h-100">
                     <div class="row g-0">
                         <div class="col-md-5">
@@ -77,11 +77,10 @@
                         </div>
                         <div class="col-md-7 ps-3">
                             <div class="d-flex flex-column justify-content-around">
-                                <a href="{{ url_for ('info', id=noticia.get_id()) }}" class="text-decoration-none text-dark">
+                                <a href="{{ url_for ('noticia', id=noticia.get_id()) }}" class="text-decoration-none text-dark">
                                     <p class="lh-sm"  style="font-size: 1.4rem !important; font-weight: bolder;">{{ noticia.get_titulo() }}</h5>
-                                    <p style="font-size: 1rem !important; font-weight: bold;">{{ noticia.get_conteudo() }}</p>
-                                    <p class="card-text"><small class="text-muted">Last updated {{ noticia.get_data() }}</small></p>
-                                    <p class="card-text"><small class="text-muted">{{ noticia.get_estado() }}</small></p>
+                                    <p class="p-0 my-1" style="font-size: 1rem !important; font-weight: bold;">{{ noticia.get_conteudo() }}</p>
+                                    <p class="p-0 my-0"><small class="text-muted">{{ noticia.get_data() }} - {{ noticia.get_estado().get_nome() }}</small></p>
                                 </a>
                             </div>
                         </div>
@@ -129,16 +128,16 @@
             </div>
         </div>
     </div>
-    <!--Columns-->
+    <!--========== Columns ==========-->
     <div class="d-flex w-25 my-5 flex-column align-items-center">
-        <div class="w-100 shadow mb-5">
+        <div class="w-100 shadow mb-5 container-fluid p-0">
             <div class="p-4 border-bottom rounded-top text-center" style="background-color: #0A1612 !important; color: #F7CE3E !important;">
                 <h4>Últimas Notícias</h4>
             </div>
-            <div class="p-3">
+            <div class="p-3 container-fluid">
                 <div class="p-3 border-bottom">
-                    <div class="d-flex align-items-center row g-0">
-                        <div class="col-md-6">
+                    <div class="d-flex align-items-center row g-0 container-fluid">
+                        <div class="col-md-6 container-fluid">
                             <p class="pe-2 m-0" style="font-size: .85rem !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                         <div class="col-md-6">
@@ -217,7 +216,7 @@
         </div>       
     </div>
 </section>
-<!--News pt2-->
+<!--========== News pt2 ==========-->
 <section>
     
 </section>
