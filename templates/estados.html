@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}G2 - O portal de notícias Globais{% endblock title %}
+
+{% block content %}
+<section class="h-100 m-auto mt-5 py-5">
+    <div class="d-flex flex-column w-100">
+        <div class="d-flex w-75 m-auto py-5 flex-column align-items-center px-5">
+        <!--========== Notícias ==========-->
+        {% for noticia in noticia_estado %}
+            <div class="w-100 mb-5">
+                <div class="border-bottom pb-5 h-100">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="{{ noticia.get_img() }}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7 ps-3">
+                            <div class="d-flex flex-column justify-content-around">
+                                <a href="{{ url_for ('noticia', id=noticia.get_id()) }}" class="text-decoration-none text-dark">
+                                    <p class="lh-sm"  style="font-size: 1.4rem !important; font-weight: bolder;">{{ noticia.get_titulo() }}</h5>
+                                    <p class="p-0 my-1" style="font-size: 1rem !important; font-weight: bold;">{{ noticia.get_conteudo() }}</p>
+                                    <p class="p-0 my-0"><small class="text-muted">{{ noticia.get_data() }} - {{ noticia.get_estado().get_nome() }}</small></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}
