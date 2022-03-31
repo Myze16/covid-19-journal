@@ -1,8 +1,9 @@
 class Estado:
-    def __init__(self, id, nome, uf):
+    def __init__(self, id, nome, uf, img):
         self.__id = id
         self.__nome = nome
         self.__uf = uf
+        self.__img = img
     
     def get_id(self):
         return self.__id
@@ -12,6 +13,9 @@ class Estado:
 
     def get_uf(self):
         return self.__uf
+
+    def get_img(self):
+        return self.__img
 
     #def get_noticias(self):
       
