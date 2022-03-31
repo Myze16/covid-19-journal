@@ -31,13 +31,13 @@
                 <!-- ========== Second News ==========-->
                 <img src="https://coronavirus.butantan.gov.br/assets/page-image/favela-sp-e6aeca3fd67db103.jpg"
                     class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block text-start">
-                        <a href="#" class="text-decoration-none text-light">
-                            <h5 class="title-carousel fs-1" style="text-shadow: 0 1px 6px rgba(0, 0, 0, .6) !important; font-weight: bolder;">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, tenetur eius facere eos repellendus cum.
-                            </h5>
-                        </a>
-                    </div>
+                <div class="carousel-caption d-none d-md-block text-start">
+                    <a href="#" class="text-decoration-none text-light">
+                        <h5 class="title-carousel fs-1" style="text-shadow: 0 1px 6px rgba(0, 0, 0, .6) !important; font-weight: bolder;">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, tenetur eius facere eos repellendus cum.
+                        </h5>
+                    </a>
+                </div>
             </div>
             <div class="carousel-item">
                 <!--========== Third news ==========-->
@@ -68,6 +68,7 @@
 <section class="h-100 m-auto mt-5 py-5">
     <div class="d-flex flex-column w-100">
         <div class="d-flex w-75 m-auto py-5 flex-column align-items-center px-5">
+        <!--========== Notícias ==========-->
         {% for noticia in noticias %}
             <div class="w-100 mb-5">
                 <div class="border-bottom pb-5 h-100">
@@ -89,48 +90,11 @@
             </div>
         {% endfor %}
         </div>
-        <div class="d-flex my-5 w-100 py-5 flex-column align-items-center">
-            <div class="w-75 mb-5">
-                <div class="border-bottom pb-5 h-100">
-                    <div class="row g-0">
-                        <div class="col-md-5">
-                            <img src="https://www.severianodealmeida.rs.gov.br/uploads/noticiascontroller/624/upload20200409151118.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-7 ps-3">
-                            <div class="d-flex flex-column justify-content-around">
-                                <a href="#" class="text-decoration-none text-dark">
-                                    <p class="lh-sm"  style="font-size: 1.4rem !important; font-weight: bolder;">Lorem ipsum dolor sit amet consectetur.</h5>
-                                    <p style="font-size: 1rem !important; font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam corrupti nostrum iure sint numquam recusandae impedit delectus.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 27 mins ago</small></p>
-                                </a>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-75 mb-5">
-                <div class="border-bottom pb-5 h-100">
-                    <div class="row g-0">
-                        <div class="col-md-5">
-                            <img src="https://www.severianodealmeida.rs.gov.br/uploads/noticiascontroller/624/upload20200409151118.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-7 ps-3">
-                            <div class="d-flex flex-column justify-content-around">
-                                <a href="#" class="text-decoration-none text-dark">
-                                    <p class="lh-sm"  style="font-size: 1.4rem !important; font-weight: bolder;">Lorem ipsum dolor sit amet consectetur.</h5>
-                                    <p style="font-size: 1rem !important; font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam corrupti nostrum iure sint numquam recusandae impedit delectus.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 4 mins ago</small></p>
-                                </a>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!--========== Columns ==========-->
     <div class="d-flex w-25 my-5 flex-column align-items-center">
         <div class="w-100 shadow mb-5 container-fluid p-0">
+            <!--========== Últimas Notícias ==========-->
             <div class="p-4 border-bottom rounded-top text-center" style="background-color: #0A1612 !important; color: #F7CE3E !important;">
                 <h4>Últimas Notícias</h4>
             </div>
@@ -145,63 +109,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-3 border-bottom">
-                    <div class="d-flex align-items-center row g-0">
-                        <div class="col-md-6">
-                            <p class="pe-2 m-0" style="font-size: .85rem !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg" class="img-fluid rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 border-bottom">
-                    <div class="d-flex align-items-center row g-0">
-                        <div class="col-md-6">
-                            <p class="pe-2 m-0" style="font-size: .85rem !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg" class="img-fluid rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 border-bottom">
-                    <div class="d-flex align-items-center row g-0">
-                        <div class="col-md-6">
-                            <p class="pe-2 m-0" style="font-size: .85rem !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg" class="img-fluid rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
             </div> 
         </div>
         <div class="w-100 shadow mb-5">
+            <!--========== Mais Lidas ==========-->
             <div class="p-4 border-bottom rounded-top text-center" style="background-color: #0A1612 !important; color: #F7CE3E !important;">
                 <h4>Mais Lidas</h4>
             </div>
             <div class="p-3">
-                <div class="p-3 border-bottom">
-                    <div class="d-flex align-items-center row g-0">
-                        <div class="col-md-6">
-                            <p class="pe-2 m-0" style="font-size: .85rem !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg" class="img-fluid rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 border-bottom">
-                    <div class="d-flex align-items-center row g-0">
-                        <div class="col-md-6">
-                            <p class="pe-2 m-0" style="font-size: .85rem !important;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg" class="img-fluid rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
                 <div class="p-3 border-bottom">
                     <div class="d-flex align-items-center row g-0">
                         <div class="col-md-6">
@@ -218,6 +133,5 @@
 </section>
 <!--========== News pt2 ==========-->
 <section>
-    
 </section>
 {% endblock content %}
