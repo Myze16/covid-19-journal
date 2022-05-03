@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from noticia import Noticia
+from noticias.model.entity.noticia import Noticia
 from model.entity.estado import Estado
 
 app = Flask(__name__)
