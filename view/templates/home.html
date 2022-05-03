@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %}G2 - O portal de notícias Globais{% endblock title %}
+
+{% block content %}
+<div id="carouselExampleControls" class="carousel slide w-50 m-auto shadow my-5" data-bs-ride="carousel">
+    <!--========== Carousel ==========-->
+    <div class="carousel-inner">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-item active">
+            <!--========== First News ==========-->
+            <img src="https://www.jornalcidademg.com.br/wp-content/uploads/2021/12/Design-sem-nome-41.png"
+                class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-start">
+                <a href="#" class="text-decoration-none text-light">
+                    <h5 class="title-carousel fs-1" style="text-shadow: 0 1px 6px rgba(0, 0, 0, .6) !important; font-weight: bolder;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, tenetur eius facere eos repellendus cum.
+                    </h5>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!-- ========== Second News ==========-->
+            <img src="https://coronavirus.butantan.gov.br/assets/page-image/favela-sp-e6aeca3fd67db103.jpg"
+                class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-start">
+                <a href="#" class="text-decoration-none text-light">
+                    
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!--========== Third news ==========-->
+            <img src="https://www.pmc.sc.gov.br/uploads/719/imagens/3104000.jpg"
+                class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block text-start">
+                <a href="#" class="text-decoration-none text-light">
+                    <h5 class="title-carousel fs-1" style="text-shadow: 0 1px 6px rgba(0, 0, 0, .6) !important; font-weight: bolder;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, tenetur eius facere eos repellendus cum.
+                    </h5>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="w-100 section">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="-2" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="3" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="-5" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="5" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="8" class="layer">
+    <img src="/logo.png" data-speed="2" class="layer" width="600px">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="-3" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="6" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="2" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="-3" class="layer">
+    <img src="https://www.crfes.org.br/wp-content/uploads/2020/01/v%C3%ADrus-png-3.png" data-speed="5" class="layer">
+</div>
+<!--========== News pt1 ==========-->
+<section class="h-100 m-auto mt-5 py-5">
+    <div class="d-flex flex-column w-100">
+        <div class="d-flex width-75 m-auto py-5 flex-column align-items-center">
+        <!--========== Notícias ==========-->
+        {% for noticia in noticias %}
+            <div class="w-100 mb-5 news">
+                <div class="w-100 border-bottom pb-5 h-100">
+                    <div class="w-100 d-flex align-items-center">
+                        <div class="">
+                            <img src="{{ noticia.get_img() }}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="ps-3">
+                            <div class="d-flex flex-column justify-content-around">
+                                <a href="{{ url_for ('noticia', id=noticia.get_id()) }}" class="text-decoration-none text-dark">
+                                    <p class="lh-sm news-title">{{ noticia.get_titulo() }}</h5>
+                                    <p class="p-0 my-1 news-content">{{ noticia.get_conteudo() }}</p>
+                                    <p class="p-0 my-0 news-date"><small class="text-muted">{{ noticia.get_data() }} - {{ noticia.get_estado().get_nome() }}</small></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    <!--========== Columns ==========-->
+    <div class="d-flex width-35 m-auto my-5 flex-column align-items-center">
+        <div class="w-100 shadow mb-5 container-fluid p-0">
+            <!--========== Últimas Notícias ==========-->
+            <div class="p-4 border-bottom rounded-top text-center" style="background-color: #0A1612 !important; color: #F7CE3E !important;">
+                <h4>Últimas Notícias</h4>
+            </div>
+            <div class="p-3 container-fluid">
+                <div class="pb-2 border-bottom">
+                    <div class="d-flex flex-nowrap align-items-center container-fluid justify-content-center">
+                        <div class="">
+                            <p class="m-0 fw-bold text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="" style="height: 94px; width: 94px; background-image: url('https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="w-100 shadow mb-5">
+            <!--========== Mais Lidas ==========-->
+            <div class="p-4 border-bottom rounded-top text-center" style="background-color: #0A1612 !important; color: #F7CE3E !important;">
+                <h4>Mais Lidas</h4>
+            </div>
+            <div class="p-3 container-fluid">
+                <div class="pb-2 border-bottom">
+                    <div class="d-flex flex-nowrap align-items-center container-fluid justify-content-center">
+                        <div class="">
+                            <p class="m-0 fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                            <div class="" style="height: 94px !important; width: 94px !important; background-image: url('https://deoliyp60f2gq.cloudfront.net/fotogaleria-brasil-1-ano-pandemia/media/images/abre.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>       
+    </div>
+</section>
+<!--========== News pt2 ==========-->
+<section>
+</section>
+{% endblock content %}
+{% block script %}
+<script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+        this.querySelectorAll('.layer').forEach(layer => {
+            const speed = layer.getAttribute('data-speed')
+
+            const x = (window.innerWidth - e.pageX*speed)/100
+            const y = (window.innerWidth - e.pageY*speed)/100
+
+            layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        })
+    }
+</script>
+{% endblock script %}

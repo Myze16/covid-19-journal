@@ -1,6 +1,7 @@
 class Noticia:
-    def __init__(self, id, data, titulo, conteudo, conteudo1, conteudo2, img, estado):
+    def __init__(self, id, views, data, titulo, conteudo, conteudo1, conteudo2, img, estado):
         self.__id = id
+        self.__views = views
         self.__data = data
         self.__titulo = titulo
         self.__conteudo = conteudo
@@ -11,6 +12,9 @@ class Noticia:
 
     def get_id(self):
         return self.__id
+
+    def get_views(self):
+        return self.__views
 
     def get_data(self):
         return self.__data

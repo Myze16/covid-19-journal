@@ -16,6 +16,3 @@ class Estado:
 
     def get_img(self):
         return self.__img
-
-    #def get_noticias(self):
-      

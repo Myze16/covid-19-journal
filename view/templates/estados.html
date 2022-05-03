@@ -9,11 +9,11 @@
         {% for noticia in noticia_estado %}
             <div class="w-100 mb-5">
                 <div class="border-bottom pb-5 h-100">
-                    <div class="row g-0">
-                        <div class="col-md-5">
+                    <div class="w-100 d-flex align-items-center news">
+                        <div class="">
                             <img src="{{ noticia.get_img() }}" class="img-fluid rounded-start" alt="...">
                         </div>
-                        <div class="col-md-7 ps-3">
+                        <div class=" ps-3">
                             <div class="d-flex flex-column justify-content-around">
                                 <a href="{{ url_for ('noticia', id=noticia.get_id()) }}" class="text-decoration-none text-dark">
                                     <p class="lh-sm"  style="font-size: 1.4rem !important; font-weight: bolder;">{{ noticia.get_titulo() }}</h5>
